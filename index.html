@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Kalkulator By Wildan</h1></header>
+    <div class="container">
+        <h1>Kalkulator</h1>
+        <img src="luas.png" alt="Segitiga" width="200">
+        <p>Selamat datang di kalkulator.</p>
+        <p>Rumus Luas Segitiga yaitu : 
+            L = 1/2 x a x t, 
+            L = luas
+            a = panjang alas
+            t = tinggi
+        </p>
+        <form id="kalkulatorForm">
+            <label for="base">Alas (cm):</label>
+            <input type="number" id="base" required>
+            
+            <label for="height">Tinggi (cm):</label>
+            <input type="number" id="height" required>
+            
+            <button type="button" onclick="calculateArea()">Hitung</button>
+        </form>
+        <div class="results">
+            <p id="area">Luas: </p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
