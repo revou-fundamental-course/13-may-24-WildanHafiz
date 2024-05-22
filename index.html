@@ -8,29 +8,52 @@
 </head>
 <body>
     <header><h1>Kalkulator By Wildan</h1></header>
-    <div class="container">
-        <h1>Kalkulator</h1>
-        <img src="luas.png" alt="Segitiga" width="200">
-        <p>Selamat datang di kalkulator.</p>
-        <p>Rumus Luas Segitiga yaitu : 
-            L = 1/2 x a x t, 
-            L = luas
-            a = panjang alas
-            t = tinggi
-        </p>
-        <form id="kalkulatorForm">
-            <label for="base">Alas (cm):</label>
-            <input type="number" id="base" required>
+        <div class="container">
+            <h1>Kalkulator</h1>
+        <div class="button-group">
+            <button onclick="showAreaForm()">Hitung Luas</button>
+            <button onclick="showPerimeterForm()">Hitung Keliling</button>
+        </div>
             
-            <label for="height">Tinggi (cm):</label>
-            <input type="number" id="height" required>
-            
-            <button type="button" onclick="calculateArea()">Hitung</button>
+        <div id="area-form" style="display: none;">
+            <img src="luas.png" alt="Segitiga" width="200">
+        <h2>Rumus Luas Segitiga yaitu : 
+            L = 1/2 x a x t</h2>
+        <form id="triangle-area-form">
+        <label for="base">Alas (cm):</label>
+        <input type="number" id="base" required>
+                            
+        <label for="height">Tinggi (cm):</label>
+        <input type="number" id="height" required>
+                            
+        <button type="button" onclick="calculateArea()">Hitung</button>
         </form>
         <div class="results">
-            <p id="area">Luas: </p>
+     <p id="area-result">Luas: </p>
         </div>
-    </div>
-<script src="script.js"></script>
-</body>
-</html>
+       </div>
+            
+     <div id="perimeter-form" style="display: none;">
+        <img src="keliling.PNG" alt="Segitiga" width="200">
+            <h2>Rumus Keliling Segitiga yaitu : 
+                K = a + b + c</h2>
+        <form id="triangle-perimeter-form">
+        <label for="sideA">Sisi A (cm):</label>
+        <input type="number" id="sideA" required>
+                            
+        <label for="sideB">Sisi B (cm):</label>
+        <input type="number" id="sideB" required>
+                            
+        <label for="sideC">Sisi C (cm):</label>
+        <input type="number" id="sideC" required>
+                            
+        <button type="button" onclick="calculatePerimeter()">Hitung</button>
+        </form>
+        <div class="results">
+            <p id="perimeter-result">Keliling: </p>
+        </div>
+        </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
